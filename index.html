@@ -216,36 +216,68 @@
         <label for="InputEmail1" class="form-label mb-3">
           <h4>Stay up-to-date with what we're doing</h4>
         </label>
-        <div>
+        <!-- <div>
           <div class="mb-3 position-relative input-group has-validation">
-            <input type="email" class="form-control px-4 py-2 plain-text" id="InputEmail1" aria-describedby="emailHelp"
-              placeholder="Enter your email adress" required />
+            <input type="email" class="form-control px-4 py-2 plain-text rounded-end rounded-start <?php if(isset($_POST['submit']) && !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){ echo 'is-invalid'; } ?>"  id="email" aria-describedby="emailHelp"
+              placeholder="Enter your email adress" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+              <div class="invalid-feedback">
+                Whoops, make sure it's an email
+              </div>
+              <button type="submit" class="btn btn-secondary text-light py-2 plain-text rounded-end rounded-start" style="margin-left: 10px;">
+                Contact Us
+              </button>
             <div class="invalid-tooltip mt-0 text-left bg-secondary">
               Nope! You must write a valid email.
             </div>
           </div>
-          <button type="submit" class="btn btn-secondary text-light py-2 plain-text">
-            Contact Us
-          </button>
-        </div>
+        </div> -->
+       <!--  <div>
+            <div class="mb-3 position-relative input-group has-validation">
+              <input type="email" class="form-control px-4 py-2 plain-text rounded-end rounded-start" name="email" id="email" aria-describedby="emailHelp"
+                placeholder="Enter your email adress" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+              <div class="invalid-feedback">
+                Whoops, make sure it's an email
+              </div>
+              <button type="submit" class="btn btn-secondary text-light py-2 plain-text rounded-end rounded-start" style="margin-left: 10px;">
+                Contact Us
+              </button>
+            </div>
+          </div> -->
+
+          <form action="#" method="post" novalidate>
+            <div>
+              <div class="mb-3 position-relative input-group">
+                <input type="email" class="form-control px-4 py-2 plain-text rounded-end rounded-start" id="email" aria-describedby="emailHelp"
+                       placeholder="Enter your email adress" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" 
+                       oninvalid="this.setCustomValidity('Whoops, make sure it\'s an email'); this.classList.add('is-invalid')" 
+                       oninput="this.setCustomValidity(''); this.classList.remove('is-invalid')">
+                <button type="submit" class="btn btn-secondary text-light py-2 plain-text rounded-end rounded-start" style="margin-left: 10px;">
+                  Contact Us
+                </button>
+              </div>
+            </div>
+          </form>
+          
+          
+          
       </form>
     </div>
 
     <nav class="navbar navbar-expand bg-secondary">
-        <div class="container" id="nav">
+        <div class="container justify-content-start" id="nav">
             <a href="./" class="navbar-brand">
-                <img src="/Imagenes/logo-bookmark.svg"></img>
+                <img src="/Imagenes/logo-bookmark.svg" class="img-fluid" alt="logo_bookmark"></img>
             </a>
 
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" style="justify-content: flex-start;">
                 <li class="nav-item">
-                    <a href="#" class="nav-link fw-semibold" style="margin-right: 30px; color: aliceblue;">Features</a>
+                    <a href="#" class="nav-link fw-semibold" style="margin-left: 30px; color: aliceblue;" >Features</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link fw-semibold" style="margin-right: 30px; color: aliceblue;">Pricing</a>
+                    <a href="#" class="nav-link fw-semibold" style="margin-left: 30px; color: aliceblue;">Pricing</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link fw-semibold" style="margin-right: 30px; color: aliceblue;">Contact</a>
+                    <a href="#" class="nav-link fw-semibold" style="margin-left: 30px; margin-right: 650px; color: aliceblue;">Contact</a>
                 </li>
                 <a href="#" class="ms-lg-5 me-3">
                     <img src="/Imagenes/icon-facebook.svg"></img>
