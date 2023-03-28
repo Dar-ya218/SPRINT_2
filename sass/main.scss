@@ -24,17 +24,17 @@ $secondary: #14213d;
   }
 }
 .btn-danger:hover{
-  background-color: white !important;
+  background-color: white;
   color: $primary !important;
 }
 
 .btn-primary:hover{
-  background-color: white !important;
+  background-color: white;
   color: $secondary !important;
 }
 
 .btn-light:hover{
-  background-color: white !important; 
+  background-color: white; 
   color: $primary !important;
 }
 .nav-link:hover{
@@ -44,12 +44,12 @@ $secondary: #14213d;
 
 
 .btn-secondary:hover{
-  background-color: white !important;
+  background-color: white;
   color: $primary !important;
 }
 
-.text-underline-hover:hover{
-  border-bottom: 3px solid red !important; 
+.nav-link.text-underline-hover:hover{
+  border-bottom: 3px solid red !important;
 }
 
 
